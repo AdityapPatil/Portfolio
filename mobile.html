@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aditya Patil - UI/UX Designer & Front-End Developer</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<style>
+body { background-color: #0A0A1B; color: #fff; font-family: 'Space Grotesk', sans-serif; }
+.glow { text-shadow: 0 0 10px rgba(123, 77, 255, 0.5); }
+.glow-secondary { text-shadow: 0 0 10px rgba(0, 240, 255, 0.5); }
+.card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
+.gradient-border { position: relative; }
+.gradient-border::before {
+content: ''; position: absolute; top: -1px; left: -1px; right: -1px; bottom: -1px;
+background: linear-gradient(45deg, #7B4DFF, #00F0FF); border-radius: 9px; z-index: -1;
+}
+</style>
+</head>
+<body class="min-h-screen">
+
+<nav class="fixed w-full bg-dark/80 backdrop-blur-lg z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold glow">AP</h1>
+    <div class="hidden md:flex space-x-8" id="desktopNav">
+      <a href="#about" class="text-gray-300 hover:text-white">About</a>
+      <a href="#work" class="text-gray-300 hover:text-white">Work</a>
+      <a href="#skills" class="text-gray-300 hover:text-white">Skills</a>
+      <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
+      <button onclick="previewResume()" class="bg-primary text-white px-6 py-2 rounded hover:bg-primary/90 transition">Resume</button>
+    </div>
+    <button class="md:hidden text-white" id="mobileMenuButton">
+      <i class="ri-menu-line text-2xl"></i>
+    </button>
+  </div>
+</nav>
+
+<header class="pt-24 pb-16 px-4 md:px-6">
+  <div class="max-w-7xl mx-auto text-center space-y-4">
+    <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden ring-4 ring-primary mx-auto">
+      <img src="https://static.readdy.ai/image/7e909dd19c63328ac94c3fa7dc897d62/7c83b2c3eeee2c76d8dbde4020887688.jfif" class="w-full h-full object-cover">
+    </div>
+    <h1 class="text-4xl md:text-7xl font-bold glow">Aditya Patil</h1>
+    <div class="text-xl md:text-3xl text-secondary glow-secondary">UI/UX Designer & Front-End Developer</div>
+    <p class="max-w-xs md:max-w-2xl mx-auto text-gray-400 text-base md:text-lg">Crafting digital experiences through design, development, and security.</p>
+    <div class="flex flex-col md:flex-row gap-4 w-full max-w-xs md:max-w-full mx-auto justify-center">
+      <button id="viewWorkBtn" class="bg-primary text-white px-6 py-3 rounded hover:bg-primary/90">View Work</button>
+      <a href="#contact" class="w-full md:w-auto">
+        <button class="border border-secondary text-secondary px-6 py-3 rounded hover:bg-secondary/10 w-full md:w-auto">Contact Me</button>
+      </a>
+    </div>
+  </div>
+</header>
+
+<section id="work" class="py-20 px-4 md:px-6">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-10 text-center glow">Selected Work</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card p-6 rounded-lg gradient-border">
+        <h3 class="text-xl font-bold mb-2">Logitech Landing Page</h3>
+        <p class="text-gray-400">A modern immersive website redesign for Logitech's gaming peripherals.</p>
+      </div>
+      <div class="card p-6 rounded-lg gradient-border">
+        <h3 class="text-xl font-bold mb-2">Dating App Interface</h3>
+        <p class="text-gray-400">A modern dating app interface focused on meaningful connections and user experience.</p>
+      </div>
+      <div class="card p-6 rounded-lg gradient-border">
+        <h3 class="text-xl font-bold mb-2">Pizza Delivery Interface</h3>
+        <p class="text-gray-400">A delightful food ordering experience with real-time delivery tracking.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="py-20 px-4 md:px-6 bg-darker">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-10 text-center glow">Skills & Expertise</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="card p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-4">Design</h3>
+        <ul class="text-gray-400 space-y-2">
+          <li>UI/UX Design</li>
+          <li>Wireframing</li>
+          <li>Prototyping</li>
+          <li>User Research</li>
+        </ul>
+      </div>
+      <div class="card p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-4">Development</h3>
+        <ul class="text-gray-400 space-y-2">
+          <li>HTML/CSS</li>
+          <li>JavaScript</li>
+          <li>Tailwind CSS</li>
+          <li>Responsive Design</li>
+        </ul>
+      </div>
+      <div class="card p-6 rounded-lg">
+        <h3 class="text-xl font-bold mb-4">Security</h3>
+        <ul class="text-gray-400 space-y-2">
+          <li>Malware Analysis</li>
+          <li>Security Tools</li>
+          <li>Threat Detection</li>
+          <li>Risk Assessment</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-20 px-4 md:px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="card p-6 md:p-12 rounded-lg">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
+        <div>
+          <h2 class="text-3xl font-bold mb-6 glow">Get in Touch</h2>
+          <form action="https://formspree.io/f/yourFormID" method="POST" class="space-y-4">
+            <input type="text" name="name" class="w-full bg-darker border-none rounded p-3 text-white" placeholder="Your name" required>
+            <input type="email" name="email" class="w-full bg-darker border-none rounded p-3 text-white" placeholder="Your email" required>
+            <textarea name="message" class="w-full bg-darker border-none rounded p-3 text-white h-32" placeholder="Your message" required></textarea>
+            <button type="submit" class="w-full bg-primary text-white py-3 rounded hover:bg-primary/90">Send Message</button>
+          </form>
+        </div>
+        <div class="text-center md:text-left space-y-4 md:pl-10">
+          <h2 class="text-3xl font-bold glow">Contact Me</h2>
+          <p class="text-gray-400">Email</p>
+          <a href="mailto:adityapradipp@gmail.com" class="text-primary text-lg font-semibold">adityapradipp@gmail.com</a>
+          <p class="text-gray-400 mt-4">Phone</p>
+          <p class="text-primary text-lg font-semibold">+91 9653236566</p>
+          <p class="text-gray-400 mt-4">Residence</p>
+          <p class="text-primary text-lg font-semibold">Mumbai, India</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-6 px-4 bg-darker">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+    <p class="text-gray-400">&copy; 2025 Aditya Patil. All rights reserved.</p>
+    <div class="flex space-x-6">
+      <a href="https://github.com/AdityapPatil" class="text-gray-400 hover:text-white"><i class="ri-github-line text-xl"></i></a>
+      <a href="https://linkedin.com/in/aditya-patil-4935ab282" class="text-gray-400 hover:text-white"><i class="ri-linkedin-line text-xl"></i></a>
+      <a href="https://instagram.com/adityyaa.29" class="text-gray-400 hover:text-white"><i class="ri-instagram-line text-xl"></i></a>
+      <a href="https://x.com/AdityaPatil0718" class="text-gray-400 hover:text-white"><i class="ri-twitter-line text-xl"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function previewResume() {
+  window.open('Aditya Resume.pdf', '_blank', 'width=800,height=600');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const mobileMenuButton = document.getElementById('mobileMenuButton');
+  const desktopNav = document.getElementById('desktopNav');
+  const viewWorkBtn = document.getElementById('viewWorkBtn');
+  const workSection = document.getElementById('work');
+
+  mobileMenuButton.addEventListener('click', () => {
+    desktopNav.classList.toggle('hidden');
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  if (viewWorkBtn && workSection) {
+    viewWorkBtn.addEventListener('click', () => {
+      workSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+});
+</script>
+
+</body>
+</html>
